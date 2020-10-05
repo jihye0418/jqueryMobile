@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scacle=1.0,minimum-scale=1.0,user-scalable=no">
+<title>jQuery mobile 예제</title>
+<link rel="stylesheet" href="../mobile/jquery.mobile-1.3.2.min.css">
+<script src="../mobile/jquery-1.9.1.min.js"></script>
+<script src="../mobile/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+ <div data-role="page">
+ 	<!-- header 
+ 		- data-role="button"을 생략해도 버튼을 만들 수 있다. 
+ 		- 버튼이 만들어지면 자동으로 좌우 배치가 된다. 
+ 	-->
+ 	<div data-role="header">
+ 		<h1>이전버튼 다음버튼</h1>
+ 		<a href="#" data-icon="arrow-l">이전버튼</a>
+ 		<a href="#" data-icon="arrow-r">다음버튼</a>
+ 	</div>
+ 	
+ 	<!-- content 
+ 		- 버튼 생성시 반드시 data-role="button"이 필요하다. 
+ 	-->
+ 	<div data-role="content">
+ 		<a href="#" data-icon="arrow-l">data-icon="arrow-l"</a>
+ 		<a href="#" data-role="button" data-icon="arrow-r">data-icon="arrow-r"</a>
+ 	</div>
+ 	
+ 	<!-- footer 
+ 		header와 공통점 : data-role="button"을 생략해도 버튼이 만들어진다.
+ 		header와 차이점 : 생성된 버튼이 자동으로 좌우 배치가 되지 않는다. 
+ 		
+ 		좌우배치를 하려면 class속성을 부여해야 한다. (ui-btn-left, ui-btn-right)
+ 		
+ 		.ui-btn-left{left:5px;}
+ 		.ui-btn-right{right:5px;}
+ 	-->
+ 	<div data-role="footer">
+ 		<h1>화면하단</h1>
+ 		<a href="#" data-icon="arrow-l" class="ui-btn-left">이전버튼</a>
+ 		<a href="#" data-icon="arrow-r" class="ui-btn-right">다음버튼</a>
+ 	</div>
+ </div>
+</body>
+</html>
