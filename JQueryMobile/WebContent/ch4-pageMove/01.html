@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scacle=1.0,minimum-scale=1.0,user-scalable=no">
+<title>jQuery mobile 예제</title>
+<link rel="stylesheet" href="../mobile/jquery.mobile-1.3.2.min.css">
+<script src="../mobile/jquery-1.9.1.min.js"></script>
+<script src="../mobile/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+<!-- 하나의 html에서 이동할 페이지를 전부 화면 디자인한다.
+	페이지가 여러 개인데 어떻게 구분할까? -> id를 부여한다. 
+ -->
+<!-- 첫번째 페이지 -->
+ <div data-role="page" id="first_page">
+ 	<!-- header -->
+ 	<div data-role="header">
+ 		<h1>첫번째 페이지</h1>
+ 	</div>
+ 	
+ 	<!-- content -->
+ 	<div data-role="content">
+ 		<a href="#second_page" data-role="button">두번째 화면으로 이동</a>
+ 	</div>
+ 	
+ 	<!-- footer -->
+ 	<div data-role="footer">
+ 		<h1>화면하단</h1>
+ 	</div>
+ </div>
+ 
+ <!-- 두번째 페이지 -->
+ <div data-role="page" id="second_page">
+ 	<!-- header -->
+ 	<div data-role="header">
+ 		<h1>두번째 페이지</h1>
+ 	</div>
+ 	
+ 	<!-- content -->
+ 	<div data-role="content">
+ 		<a href="#first_page" data-role="button">첫번째 화면으로 이동</a>
+ 	</div>
+ 	
+ 	<!-- footer -->
+ 	<div data-role="footer">
+ 		<h1>화면하단</h1>
+ 	</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scacle=1.0,minimum-scale=1.0,user-scalable=no">
+<title>jQuery mobile 예제</title>
+<link rel="stylesheet" href="../mobile/jquery.mobile-1.3.2.min.css">
+<script src="../mobile/jquery-1.9.1.min.js"></script>
+<script src="../mobile/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<style>
+	.ui-table-width{
+		width: 100%;
+	}
+</style>
+<body>
+ <div data-role="page">
+ 	<!-- header -->
+ 	<div data-role="header">
+ 		<h1>form</h1>
+ 		<a href="#" data-icon="home" data-iconpos="notext">Home</a>
+ 		<a href="#" data-icon="search" data-iconpos="notext">Search</a>
+ 	</div>
+ 	<!-- bootstrap에서 form-group을 줬는데 jqueryMobile에서는 data-role="fieldcontain"을 준다 -->
+
+ 	
+ 	<!-- content -->
+ 	<div data-role="content">
+ 		<!-- 실시간 검색=> data-filter="true"
+ 			interview항목의 구분선 => data-role="list-divider"
+ 		 -->
+ 		 <ul data-role="listview" data-filter="true">
+ 		 	<li data-role="list-divider">구분선</li>
+ 		 	<li><a href="#">테스트1</a></li>
+ 		 	<li><a href="#">테스트2</a></li>
+ 		 	<li><a href="#">테스트3</a></li>
+ 		 	<li><a href="#">테스트4</a></li>
+ 		 	<li><a href="#">테스트5</a></li>
+ 		 	<li><a href="#">응</a></li>
+ 		 	<li><a href="#">안녕</a></li>
+ 		 	<li><a href="#">신기하네</a></li>
+ 		 </ul>
+ 	</div>
+
+ 	<!-- footer -->
+ 	<div data-role="footer" data-id="persistFooter" data-position="fixed">
+ 		<div data-role="navbar">
+ 			<ul>
+ 				<li><a href="a.html" data-icon="plus" >회원가입</a></li>
+ 				<li><a href="b.html" data-icon="search" class="ui-btn-active ui-state-persist">검색</a></li>
+ 				<li><a href="c.html" data-icon="gear">목록보기</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scacle=1.0,minimum-scale=1.0,user-scalable=no">
+<title>jQuery mobile 예제</title>
+<link rel="stylesheet" href="../mobile/jquery.mobile-1.3.2.min.css">
+<script src="../mobile/jquery-1.9.1.min.js"></script>
+<script src="../mobile/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<style>
+	.ui-table-width{
+		width: 100%;
+	}
+</style>
+<body>
+ <div data-role="page">
+ 	<!-- header -->
+ 	<div data-role="header">
+ 		<h1>form</h1>
+ 		<a href="#" data-icon="home" data-iconpos="notext">Home</a>
+ 		<a href="#" data-icon="search" data-iconpos="notext">Search</a>
+ 	</div>
+ 	<!-- bootstrap에서 form-group을 줬는데 jqueryMobile에서는 data-role="fieldcontain"을 준다 -->
+
+ 	
+ 	<!-- content -->
+ 	<div data-role="content">
+ 		<div data-role="fieldcontain">
+	 		<label for="name">이름:</label>
+	 		<input type="text" name="name" id="name">
+ 		</div>
+ 		
+ 		<!-- textarea -->
+ 		<div data-role="fieldcontain">
+	 		<label for="textarea">경력사항:</label>
+	 		<textarea rows="8" cols="40" id="textarea" name="textarea"></textarea>
+ 		</div>
+ 		
+ 		<!-- 검색 -->
+ 		<div data-role="fieldcontain">
+	 		<label for="search">검색:</label>
+	 		<input type="search" name="search" id="search">
+ 		</div>
+ 		
+ 		<!-- Flip Switch(on / off) data-role="slider" -->
+ 		<div data-role="fieldcontain">
+	 		<label for="switch">Wi-Fi:</label>
+	 		<select name="switch" id="switch" data-role="slider">
+	 			<option value="on">on</option>
+	 			<option value="off">off</option>
+	 		</select>
+ 		</div>
+ 		
+ 		<!-- 슬라이드바 -->
+ 		<div data-role="fieldcontain">
+	 		<label for="slider">SliderBar:</label>
+	 		<input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true"><!-- value(현재값) / data-highlight="true" : 선택 배경을 파란색으로 설정  -->
+ 		</div>
+ 		
+ 		<!-- 다중선택 -->
+ 		<div data-role="fieldcontain">
+ 			<fieldset>
+ 				<legend>취업 희망 직업</legend>
+ 				<label for="checkbox-a">프로그래머</label>
+ 				<input type="checkbox" name="checkbox" id="checkbox-a" value="프로그래머">
+ 				<label for="checkbox-b">프런트엔드</label>
+ 				<input type="checkbox" name="checkbox" id="checkbox-b" value="프런트엔드">
+ 			</fieldset>
+ 		</div>
+ 		
+ 		<!-- checkbox 작게, 수평정렬 : data-mini="true" -->
+ 		<div data-role="fieldcontain">
+ 			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+ 				<legend>글자 스타일</legend>
+ 				
+ 				<label for="checkbox-a">B</label>
+ 				<input type="checkbox" name="checkbox" id="checkbox-a" value="B">
+ 				
+ 				<label for="checkbox-b">I</label>
+ 				<input type="checkbox" name="checkbox" id="checkbox-b" value="I">
+ 				
+ 				<label for="checkbox-u">U</label>
+ 				<input type="checkbox" name="checkbox" id="checkbox-u" value="U">
+ 			</fieldset>
+ 			
+ 			<!-- 콤보박스 -->
+ 		<div data-role="fieldcontain">
+	 		<label for="select-choice-a">좋아하는 과목 선택:</label>
+	 		<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+	 			<option>선택</option>
+	 			<option value="Java">Java</option>
+	 			<option value="python">python</option>
+	 			<option value="Javascript">Javascript</option>
+	 		</select>
+ 		</div>
+ 		
+ 		<!-- 전송버튼 및 리셋버튼 작성 -->
+ 		<table class="ui-table-width">
+ 			<tr>
+ 				<td><a href="#" data-role="button">가입</a></td>
+ 				<td><a href="#" data-role="button">재입력</a></td>
+ 			</tr>
+ 		</table>
+ 		
+ 	</div>
+
+ 	<!-- footer 지정
+ 		각 페이지마다 footer 네비게이션바가 공통으로 사용될 수 있도록 설정
+ 		선택한 화면의 상태를 유지할 필요가 있다 => data-id 지정, data-position="fixed" 지정
+ 		디폴트 선택버튼의 class속성값-> ui-btn-active, ui-state-persist
+ 	-->
+ 	<div data-role="footer" data-id="persistFooter" data-position="fixed">
+ 		<div data-role="navbar">
+ 			<ul>
+ 				<li><a href="a.html" data-icon="plus" class="ui-btn-active ui-state-persist">회원가입</a></li>
+ 				<li><a href="b.html" data-icon="search">검색</a></li>
+ 				<li><a href="c.html" data-icon="gear">목록보기</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+ </div>
+</body>
+</html>
